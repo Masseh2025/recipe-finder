@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Design system: Color (Figma node 73-6934) */
+/* Design system: Figma healthy-recipe-website */
 @theme {
   /* Neutrals */
   --color-neutral-0: hsl(0, 0%, 100%);
@@ -13,4 +13,9 @@
   --color-orange-500: hsl(21, 98%, 71%);
   --color-teal-500: hsl(170, 40%, 48%);
   --color-indigo-500: hsl(230, 62%, 64%);
+  /* Typography (Figma) */
+  --font-heading: "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-nunito: "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-nunito-sans: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
 }
