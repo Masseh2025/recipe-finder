@@ -96,8 +96,15 @@ export default function Nav() {
           </Link>
           {/*"mobile nav"*/}
           {openMenu && (
-            <ul className="flex flex-col md:hidden items-center gap-6 list-none p-0 m-0">
-              <li className="relative">
+            <motion.ul
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              initial={{ opacity: 0, y: -100 }}
+              className="flex flex-col md:hidden items-center gap-6 list-none p-0 m-0"
+            >
+              <motion.li className="relative">
                 <Link
                   onClick={() => setCurrentIndex("/")}
                   href="/"
@@ -111,9 +118,9 @@ export default function Nav() {
                     className="rounded-full w-full absolute bottom-0 left-0 h-full bg-orange-500/50"
                   ></motion.span>
                 )}
-              </li>
+              </motion.li>
 
-              <li className="relative">
+              <motion.li className="relative">
                 <Link
                   onClick={() => setCurrentIndex("/about")}
                   href="/about"
@@ -127,9 +134,9 @@ export default function Nav() {
                     className=" rounded-full w-full absolute bottom-0 left-0 h-full bg-orange-500/50"
                   ></motion.span>
                 )}
-              </li>
+              </motion.li>
 
-              <li className="relative">
+              <motion.li className="relative">
                 <Link
                   onClick={() => setCurrentIndex("/recipies")}
                   href="/recipies"
@@ -143,8 +150,8 @@ export default function Nav() {
                     className="rounded-full w-full absolute bottom-0 left-0 h-full bg-orange-500/50"
                   ></motion.span>
                 )}
-              </li>
-            </ul>
+              </motion.li>
+            </motion.ul>
           )}
           {/*"end mobile nav"*/}
         </nav>
