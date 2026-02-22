@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function AboutPage() {
@@ -6,7 +7,7 @@ export default function AboutPage() {
       <main className="flex-1">
         {/* Hero / Our mission */}
         <section className="max-w-6xl mx-auto px-5 py-16 sm:px-10 sm:py-20">
-          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
             <div>
               <span className="inline-block px-3 py-1.5 bg-orange-500 text-neutral-0 text-sm font-semibold rounded-md mb-6">
                 Our mission
@@ -25,11 +26,11 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="relative">
-              <div className="aspect-3/4 max-h-[500px] rounded-2xl overflow-hidden bg-neutral-200 relative">
-                {/* Asset from challenge: add as public/images/about-hero.jpg */}
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/images/about-hero.jpg"
+              <div className="rounded-2xl overflow-hidden bg-neutral-200 relative">
+                <Image
+                  width={500}
+                  height={500}
+                  src="/assets/images/image-about-our-mission-large.webp"
                   alt="Person chopping fresh vegetables in a kitchen"
                   className="w-full h-full object-cover"
                 />
@@ -79,15 +80,13 @@ export default function AboutPage() {
               ].map((item) => (
                 <li key={item.title} className="flex gap-4">
                   <span className="text-teal-500 mt-1 shrink-0" aria-hidden>
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 12 12"
-                      fill="currentColor"
-                      className="rotate-0"
-                    >
-                      <path d="M2 2 L10 6 L2 10 Z" />
-                    </svg>
+                    <Image
+                      src="/assets/images/icon-bullet-point.svg"
+                      alt="Why we exist"
+                      width={50}
+                      height={50}
+                      className="w-full"
+                    />
                   </span>
                   <div>
                     <h3 className="font-(family-name:--font-nunito) font-bold text-xl text-neutral-900 mb-2">
@@ -130,14 +129,13 @@ export default function AboutPage() {
               ].map((item) => (
                 <li key={item.title} className="flex gap-4">
                   <span className="text-teal-500 mt-1 shrink-0" aria-hidden>
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 12 12"
-                      fill="currentColor"
-                    >
-                      <path d="M2 2 L10 6 L2 10 Z" />
-                    </svg>
+                    <Image
+                      src="/assets/images/icon-bullet-point.svg"
+                      alt="Why we exist"
+                      width={50}
+                      height={50}
+                      className="w-full"
+                    />
                   </span>
                   <div>
                     <h3 className="font-(family-name:--font-nunito) font-bold text-xl text-neutral-900 mb-2">
@@ -155,7 +153,7 @@ export default function AboutPage() {
 
         {/* Beyond the plate */}
         <section className="max-w-6xl mx-auto px-5 py-12 sm:px-10 sm:py-16">
-          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <div className="grid lg:grid-cols-[1.1fr_1.9fr] grid-cols-1 md:grid-cols-1 gap-12 md:gap-16 items-center">
             <div>
               <h2 className="font-(family-name:--font-nunito) font-extrabold text-4xl sm:text-5xl text-neutral-900 leading-tight mb-6">
                 Beyond the plate
@@ -183,11 +181,11 @@ export default function AboutPage() {
               </ul>
             </div>
             <div className="relative">
-              <div className="aspect-3/4 max-h-[500px] rounded-2xl overflow-hidden bg-neutral-200 relative">
-                {/* Asset from challenge: add as public/images/about-beyond.jpg */}
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/images/about-beyond.jpg"
+              <div className=" rounded-2xl overflow-hidden bg-neutral-200 relative">
+                <Image
+                  width={600}
+                  height={350}
+                  src="/assets/images/image-about-beyond-the-plate-large.webp"
                   alt="Family in kitchen with fresh produce"
                   className="w-full h-full object-cover"
                 />
