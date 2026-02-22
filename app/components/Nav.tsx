@@ -2,10 +2,16 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
+type PATH_NAMES = ["/", "/about", "/recipies"];
+
 export default function Nav() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const pathname = usePathname();
+  const [currentIndex, setCurrentIndex] = useState<PATH_NAMES[number]>(
+    `${pathname as PATH_NAMES[number]}`,
+  );
   return (
     <header className="bg-neutral-0 border-b border-neutral-200">
       <div className="max-w-6xl mx-auto px-5 py-4 sm:px-10 flex items-center justify-between gap-6">
@@ -19,13 +25,13 @@ export default function Nav() {
           <ul className="flex items-center gap-6 list-none p-0 m-0">
             <li className="relative">
               <Link
-                onClick={() => setCurrentIndex(0)}
+                onClick={() => setCurrentIndex("/")}
                 href="/"
                 className="text-neutral-800 font-medium hover:text-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 rounded"
               >
                 Home
               </Link>
-              {currentIndex === 0 && (
+              {currentIndex === "/" && (
                 <motion.span
                   layoutId="underline"
                   className="rounded-full w-full absolute bottom-0 left-0 h-[3px] bg-orange-500"
@@ -35,13 +41,13 @@ export default function Nav() {
 
             <li className="relative">
               <Link
-                onClick={() => setCurrentIndex(1)}
+                onClick={() => setCurrentIndex("/about")}
                 href="/about"
                 className="text-neutral-900 font-semibold pb-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 rounded"
               >
                 About
               </Link>
-              {currentIndex === 1 && (
+              {currentIndex === "/about" && (
                 <motion.span
                   layoutId="underline"
                   className="rounded-full w-full absolute bottom-0 left-0 h-[3px] bg-orange-500"
@@ -51,13 +57,13 @@ export default function Nav() {
 
             <li className="relative">
               <Link
-                onClick={() => setCurrentIndex(2)}
+                onClick={() => setCurrentIndex("/recipies")}
                 href="/recipies"
                 className="text-neutral-800 font-medium hover:text-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 rounded"
               >
                 Recipes
               </Link>
-              {currentIndex === 2 && (
+              {currentIndex === "/recipies" && (
                 <motion.span
                   layoutId="underline"
                   className="rounded-full w-full absolute bottom-0 left-0 h-[3px] bg-orange-500"
