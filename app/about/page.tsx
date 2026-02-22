@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <main className="flex-1">
+    <>
+      <main>
         {/* Hero / Our mission */}
-        <section className="max-w-6xl mx-auto px-5 py-16 sm:px-10 sm:py-20">
+        <section className=" px-5 py-16 sm:px-10 sm:py-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
             <div>
               <span className="inline-block px-3 py-1.5 bg-orange-500 text-neutral-0 text-sm font-semibold rounded-md mb-6">
@@ -32,7 +32,14 @@ export default function AboutPage() {
                   height={500}
                   src="/assets/images/image-about-our-mission-large.webp"
                   alt="Person chopping fresh vegetables in a kitchen"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover hidden md:block"
+                />
+                <Image
+                  width={300}
+                  height={300}
+                  src="/assets/images/image-about-our-mission-small.webp"
+                  alt="Person chopping fresh vegetables in a kitchen"
+                  className="w-full object-cover md:hidden"
                 />
               </div>
               <span
@@ -54,7 +61,7 @@ export default function AboutPage() {
         </section>
 
         {/* Why we exist */}
-        <section className="max-w-6xl mx-auto px-5 py-12 sm:px-10 sm:py-16">
+        <section className="">
           <div className="grid md:grid-cols-[1fr_2fr] gap-12 md:gap-16">
             <h2 className="font-(family-name:--font-nunito) font-extrabold text-4xl sm:text-5xl text-neutral-900 leading-tight">
               Why we exist
@@ -103,7 +110,7 @@ export default function AboutPage() {
         </section>
 
         {/* Our food philosophy */}
-        <section className="max-w-6xl mx-auto px-5 py-12 sm:px-10 sm:py-16">
+        <section className="">
           <div className="grid md:grid-cols-[1fr_2fr] gap-12 md:gap-16">
             <h2 className="font-(family-name:--font-nunito) font-extrabold text-4xl sm:text-5xl text-neutral-900 leading-tight">
               Our food philosophy
@@ -152,7 +159,7 @@ export default function AboutPage() {
         </section>
 
         {/* Beyond the plate */}
-        <section className="max-w-6xl mx-auto px-5 py-12 sm:px-10 sm:py-16">
+        <section className="">
           <div className="grid lg:grid-cols-[1.1fr_1.9fr] grid-cols-1 md:grid-cols-1 gap-12 md:gap-16 items-center">
             <div>
               <h2 className="font-(family-name:--font-nunito) font-extrabold text-4xl sm:text-5xl text-neutral-900 leading-tight mb-6">
@@ -249,7 +256,7 @@ export default function AboutPage() {
 
       {/* Footer */}
       <footer className="border-t border-neutral-200 bg-neutral-0 mt-auto">
-        <div className="max-w-6xl mx-auto px-5 py-6 sm:px-10 flex flex-wrap items-center justify-between gap-4">
+        <div className="">
           <p className="text-neutral-800 text-sm">
             Made with <span aria-label="love">❤️</span> and{" "}
             <span aria-label="sparkle">✨</span>
@@ -326,6 +333,6 @@ export default function AboutPage() {
           </div>
         </div>
       </footer>
-    </div>
+    </>
   );
 }

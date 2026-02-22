@@ -14,9 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased bg-neutral-100 text-neutral-900">
-        <Nav />
-        {children}
+      <body className="font-sans antialiased">
+        <div className="min-h-screen h-full w-full min-w-screen bg-neutral-100 text-neutral-900">
+          <Nav />
+          {children}
+        </div>
       </body>
     </html>
   );
