@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,7 +8,13 @@ export default function AboutPage() {
     <>
       <main>
         {/* Hero / Our mission */}
-        <section className="max-w-6xl mx-auto px-5 py-16 sm:px-10 sm:py-20">
+        <motion.section
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, type: "spring" }}
+          viewport={{ once: true }}
+          className="max-w-6xl mx-auto px-5 py-16 sm:px-10 sm:py-20"
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
             <div>
               <span className="inline-block px-3 py-1.5 bg-orange-500 text-neutral-0 text-sm font-semibold rounded-md mb-6">
@@ -56,10 +64,16 @@ export default function AboutPage() {
               </span>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Why we exist */}
-        <section className="max-w-6xl mx-auto px-5 py-16 sm:px-10 sm:py-20">
+        <motion.section
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, type: "spring" }}
+          viewport={{ once: true }}
+          className="max-w-6xl mx-auto px-5 py-16 sm:px-10 sm:py-20"
+        >
           <div className="grid md:grid-cols-[1fr_2fr] gap-12 md:gap-16">
             <h2 className="font-(family-name:--font-nunito) font-extrabold text-4xl sm:text-5xl text-neutral-900 leading-tight">
               Why we exist
@@ -105,10 +119,16 @@ export default function AboutPage() {
               ))}
             </ul>
           </div>
-        </section>
+        </motion.section>
 
         {/* Our food philosophy */}
-        <section className="max-w-6xl mx-auto px-5 py-16 sm:px-10 sm:py-20">
+        <motion.section
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, type: "spring" }}
+          viewport={{ once: true }}
+          className="max-w-6xl mx-auto px-5 py-16 sm:px-10 sm:py-20"
+        >
           <div className="grid md:grid-cols-[1fr_2fr] gap-12 md:gap-16">
             <h2 className="font-(family-name:--font-nunito) font-extrabold text-4xl sm:text-5xl text-neutral-900 leading-tight">
               Our food philosophy
@@ -154,10 +174,16 @@ export default function AboutPage() {
               ))}
             </ul>
           </div>
-        </section>
+        </motion.section>
 
         {/* Beyond the plate */}
-        <section className="max-w-6xl mx-auto px-5 py-16 sm:px-10 sm:py-20">
+        <motion.section
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, type: "spring" }}
+          viewport={{ once: true }}
+          className="max-w-6xl mx-auto px-5 py-16 sm:px-10 sm:py-20"
+        >
           <div className="grid lg:grid-cols-[1.1fr_1.9fr] grid-cols-1 md:grid-cols-1 gap-12 md:gap-16 items-center">
             <div>
               <h2 className="font-(family-name:--font-nunito) font-extrabold text-4xl sm:text-5xl text-neutral-900 leading-tight mb-6">
@@ -197,10 +223,14 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* CTA */}
-        <section
+        <motion.section
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, type: "spring" }}
+          viewport={{ once: true }}
           className="max-w-6xl mx-auto px-5 py-12 sm:px-10 sm:py-16"
           aria-labelledby="cta-heading"
         >
@@ -245,7 +275,7 @@ export default function AboutPage() {
               Browse recipes
             </Link>
           </div>
-        </section>
+        </motion.section>
       </main>
     </>
   );
