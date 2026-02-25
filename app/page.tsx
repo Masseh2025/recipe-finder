@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import CTA from "./components/CTA";
 
 export default function Home() {
   return (
@@ -35,10 +36,10 @@ export default function Home() {
           />
         </span>
 
-        <div className="relative text-center max-w-3xl mx-auto">
+        <div className="relative text-center max-w-4xl mx-auto">
           <h1
             id="hero-heading"
-            className="font-[--font-nunito] font-extrabold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-neutral-900 leading-[1.1] tracking-tight mb-6"
+            className="font-(family-name:--font-nunito) font-extrabold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-neutral-900 leading-[1.1] tracking-tight mb-6"
           >
             <span className="relative">
               <span className="relative z-10 bg-orange-500/25 px-1 rounded">
@@ -58,17 +59,17 @@ export default function Home() {
             Start exploring
           </Link>
 
-          <div className="mt-12 sm:mt-16 relative">
-            <div className="rounded-2xl overflow-hidden bg-neutral-200 shadow-lg max-w-4xl mx-auto">
+          <div className="w-full mt-12 sm:mt-16 relative">
+            <div className="border-white border-8 rounded-2xl overflow-hidden bg-neutral-200 shadow-lg max-w-4xl mx-auto">
               <Image
-                src="/assets/images/image-about-our-mission-large.webp"
+                src="/assets/images/image-home-hero-large.webp"
                 alt="Person chopping fresh vegetables in a bright kitchen"
                 width={800}
                 height={500}
-                className="w-full h-auto object-cover hidden md:block"
+                className="w-full h-auto font-(family-name:--font-nunito) font-extrabold text-4xl sm:text-5xlto object-cover hidden md:block"
               />
               <Image
-                src="/assets/images/image-about-our-mission-small.webp"
+                src="/assets/images/image-home-hero-small.webp"
                 alt="Person chopping fresh vegetables in a bright kitchen"
                 width={600}
                 height={400}
@@ -184,52 +185,7 @@ export default function Home() {
       </section>
 
       {/* Ready to cook smarter? CTA */}
-      <section
-        className="relative bg-teal-500/15 py-16 sm:py-20 overflow-hidden"
-        aria-labelledby="cta-heading"
-      >
-        <span
-          className="absolute left-0 top-1/2 -translate-y-1/2 w-32 sm:w-40 h-32 sm:h-40 text-neutral-300/70 pointer-events-none"
-          aria-hidden
-        >
-          <Image
-            src="/assets/images/pattern-fork.svg"
-            alt=""
-            width={160}
-            height={160}
-            className="w-full h-full object-contain"
-          />
-        </span>
-        <span
-          className="absolute right-0 top-1/2 -translate-y-1/2 w-32 sm:w-40 h-32 sm:h-40 text-teal-500/40 pointer-events-none"
-          aria-hidden
-        >
-          <Image
-            src="/assets/images/pattern-knife.svg"
-            alt=""
-            width={160}
-            height={160}
-            className="w-full h-full object-contain"
-          />
-        </span>
-        <div className="relative max-w-6xl mx-auto px-5 sm:px-10 text-center">
-          <h2
-            id="cta-heading"
-            className="font-[--font-nunito] font-extrabold text-3xl sm:text-4xl text-neutral-900 mb-3"
-          >
-            Ready to cook smarter?
-          </h2>
-          <p className="text-neutral-800 text-lg max-w-xl mx-auto mb-8">
-            Hit the button, pick a recipe, and get dinner on the table—fast.
-          </p>
-          <Link
-            href="/recipies"
-            className="inline-block px-6 py-3.5 bg-neutral-900 text-neutral-0 font-semibold rounded-lg hover:bg-neutral-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 transition-colors"
-          >
-            Browse recipes
-          </Link>
-        </div>
-      </section>
+      <CTA />
     </main>
   );
 }
