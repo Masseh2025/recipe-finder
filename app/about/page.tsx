@@ -15,7 +15,7 @@ export default function AboutPage() {
           viewport={{ once: true }}
           className="max-w-6xl mx-auto px-5 py-16 sm:px-10 sm:py-20"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
             <div>
               <span className="inline-block px-3 py-1.5 bg-orange-500 text-neutral-0 text-sm font-semibold rounded-md mb-6">
                 Our mission

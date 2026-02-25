@@ -16,8 +16,8 @@ export default function Nav() {
   return (
     <header className="bg-neutral-0 border-b px-2 py-4 border-neutral-200">
       <div className="max-w-6xl mx-auto">
-        <nav className="w-full flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="flex md:block justify-between w-full md:w-auto">
+        <nav className="w-full flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="flex lg:block justify-between w-full lg:w-auto">
             <Image
               src="assets/images/logo.svg"
               alt="Healthy Recipe Finder"
@@ -25,7 +25,7 @@ export default function Nav() {
               height={200}
             />
             <button
-              className="md:hidden w-10 h-10 flex items-center justify-center bg-neutral-200 rounded-md"
+              className="lg:hidden w-10 h-10 flex items-center justify-center bg-neutral-200 rounded-md"
               onClick={() => setOpenMenu(!openMenu)}
             >
               <Image
@@ -38,7 +38,7 @@ export default function Nav() {
             </button>
           </div>
 
-          <ul className="hidden md:flex items-center gap-6 list-none p-0 m-0">
+          <ul className="hidden lg:flex items-center gap-6 list-none p-0 m-0">
             <li className="relative">
               <Link
                 onClick={() => setCurrentIndex("/")}
@@ -90,7 +90,7 @@ export default function Nav() {
 
           <Link
             href="/recipies"
-            className="hidden md:block ml-2 px-5 py-2.5 bg-neutral-900 text-neutral-0 font-semibold rounded-lg hover:bg-neutral-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 transition-colors"
+            className="hidden lg:block ml-2 px-5 py-2.5 bg-neutral-900 text-neutral-0 font-semibold rounded-lg hover:bg-neutral-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 transition-colors"
           >
             Browse recipes
           </Link>
@@ -102,7 +102,7 @@ export default function Nav() {
                 y: 0,
               }}
               initial={{ opacity: 0, y: -100 }}
-              className="flex flex-col md:hidden items-center gap-6 list-none p-0 m-0"
+              className="flex flex-col lg:hidden items-center gap-6 list-none p-0 m-0"
             >
               <motion.li className="relative">
                 <Link
