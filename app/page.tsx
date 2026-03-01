@@ -65,7 +65,7 @@ export default function Home() {
       >
         <h2
           id="what-you-get-heading"
-          className="font-[--font-nunito] font-extrabold text-3xl sm:text-4xl text-neutral-900 text-center mb-12 sm:mb-16"
+          className="font-(family-name:--font-nunito) font-extrabold text-4xl text-neutral-900 text-center mb-12 sm:mb-16"
         >
           What you&apos;ll get
         </h2>
@@ -131,7 +131,7 @@ export default function Home() {
           <div>
             <h2
               id="built-for-real-life-heading"
-              className="font-[--font-nunito] font-extrabold text-3xl sm:text-4xl lg:text-5xl text-neutral-900 leading-tight mb-6"
+              className="font-(family-name:--font-nunito) font-extrabold text-3xl sm:text-4xl lg:text-5xl text-neutral-900 leading-tight mb-6"
             >
               Built for real life
             </h2>
