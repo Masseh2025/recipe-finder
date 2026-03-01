@@ -1,12 +1,18 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import CTA from "./components/CTA";
+import { motion } from "motion/react";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero */}
-      <section
+      <motion.section
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, type: "spring" }}
+        viewport={{ once: true }}
         className="relative max-w-6xl mx-auto px-5 pt-12 pb-16"
         aria-labelledby="hero-heading"
       >
@@ -56,10 +62,14 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* What you'll get */}
-      <section
+      <motion.section
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, type: "spring" }}
+        viewport={{ once: true }}
         className="max-w-6xl mx-auto px-5 py-16 sm:px-10 sm:py-20"
         aria-labelledby="what-you-get-heading"
       >
@@ -120,10 +130,14 @@ export default function Home() {
             </p>
           </article>
         </div>
-      </section>
+      </motion.section>
 
       {/* Built for real life */}
-      <section
+      <motion.section
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, type: "spring" }}
+        viewport={{ once: true }}
         className="max-w-6xl mx-auto px-5 py-16 sm:px-10 sm:py-20"
         aria-labelledby="built-for-real-life-heading"
       >
@@ -160,7 +174,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Ready to cook smarter? CTA */}
       <CTA />
