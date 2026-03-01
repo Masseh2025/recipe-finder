@@ -7,36 +7,12 @@ export default function Home() {
     <main className="min-h-screen">
       {/* Hero */}
       <section
-        className="relative max-w-6xl mx-auto px-5 pt-12 pb-16 sm:px-10 sm:pt-16 sm:pb-24 overflow-hidden"
+        className="relative max-w-6xl mx-auto px-5 pt-12 pb-16"
         aria-labelledby="hero-heading"
       >
         {/* Background shapes */}
-        <span
-          className="absolute top-0 right-0 w-[280px] sm:w-[360px] h-[320px] text-indigo-500/30 pointer-events-none"
-          aria-hidden
-        >
-          <Image
-            src="/assets/images/pattern-squiggle-2.svg"
-            alt=""
-            width={360}
-            height={320}
-            className="w-full h-full object-contain object-top-right"
-          />
-        </span>
-        <span
-          className="absolute left-0 top-[120px] sm:top-[180px] w-[180px] sm:w-[220px] h-[200px] text-indigo-500/30 pointer-events-none"
-          aria-hidden
-        >
-          <Image
-            src="/assets/images/pattern-squiggle-1.svg"
-            alt=""
-            width={220}
-            height={200}
-            className="w-full h-full object-contain"
-          />
-        </span>
 
-        <div className="relative text-center max-w-4xl mx-auto">
+        <div className=" text-center max-w-4xl mx-auto">
           <h1
             id="hero-heading"
             className="font-(family-name:--font-nunito) font-extrabold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-neutral-900 leading-[1.1] tracking-tight mb-6"
@@ -59,22 +35,24 @@ export default function Home() {
             Start exploring
           </Link>
 
-          <div className="w-full mt-12 sm:mt-16 relative">
-            <div className="border-white border-8 rounded-2xl overflow-hidden bg-neutral-200 shadow-lg max-w-4xl mx-auto">
-              <Image
-                src="/assets/images/image-home-hero-large.webp"
-                alt="Person chopping fresh vegetables in a bright kitchen"
-                width={800}
-                height={500}
-                className="w-full h-auto font-(family-name:--font-nunito) font-extrabold text-4xl sm:text-5xlto object-cover hidden md:block"
-              />
-              <Image
-                src="/assets/images/image-home-hero-small.webp"
-                alt="Person chopping fresh vegetables in a bright kitchen"
-                width={600}
-                height={400}
-                className="w-full h-auto object-cover md:hidden"
-              />
+          <div className="w-full relative">
+            <div className=" w-full max-w-4xl mx-auto">
+              <div className="border-8 border-white rounded-2xl overflow-hidden bg-neutral-200 shadow-lg mt-12">
+                <Image
+                  src="/assets/images/image-home-hero-large.webp"
+                  alt="Person chopping fresh vegetables in a bright kitchen"
+                  width={800}
+                  height={500}
+                  className="w-full h-auto font-(family-name:--font-nunito) font-extrabold text-4xl sm:text-5xlto object-cover hidden md:block"
+                />
+                <Image
+                  src="/assets/images/image-home-hero-small.webp"
+                  alt="Person chopping fresh vegetables in a bright kitchen"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto object-cover md:hidden"
+                />
+              </div>
             </div>
           </div>
         </div>
